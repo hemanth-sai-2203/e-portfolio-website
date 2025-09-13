@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name's E-Portfolio</title>
+    <!-- Use a modern, geometric sans-serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #acc0df; /* GitHub-like dark background */
+            color: #dee4e9; /* Light gray text */
+        }
+        .section-container {
+            background-color: #344153; /* Slightly lighter dark section background */
+            border: 1px solid #4b5663;
+        }
+        .sidebar {
+            background-color: #253755;
+        }
+        .btn {
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(68, 67, 67, 0.25);
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 20px rgba(63, 61, 61, 0.4);
+        }
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #232a35;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #444c56;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar fixed inset-y-0 left-0 w-full lg:w-1/4 h-auto lg:h-screen p-8 lg:p-12 flex flex-col justify-between items-center z-50">
+            <div class="text-center w-full">
+                <h1 class="text-4xl font-bold mt-6 text-white">Hemanth sai Machi reddy</h1>
+                <!-- Tagline -->
+                <p class="mt-2 text-xl font-medium text-[#22d3ee]">Student & Aspiring data scientist</p>
+                <div class="mt-8">
+                    <ul class="space-y-4 text-center lg:text-left">
+                        <li><a href="#about" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">About Me</a></li>
+                        <li><a href="#education" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Education</a></li>
+                        <li><a href="#skills" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
+                        <li><a href="#projects" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
+                        <li><a href="#extracurricular" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Extracurricular</a></li>
+                        <li><a href="#resume" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Resume</a></li>
+                        <li><a href="#contact" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 lg:mt-0 flex flex-wrap justify-center gap-4 text-gray-400">
+                <a href="https://in.linkedin.com/in/hemanth-sai-machireddy-a1b192381" target="_blank" class="hover:text-[#22d3ee] transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="https://github.com/hemanth-sai-2203" target="_blank" class="hover:text-[#22d3ee] transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22s-4 0-5-3c-4 0-5-3-5-3-2-5-1-6 1-7a4.9 4.9 0 0 1 1-1c0-2-3-5 3-5 5 0 8 3 8 5a4.9 4.9 0 0 1 1 1c2 1 3 2 1 7-1 3-5 3-5 3"/><path d="M12 2v20"/><path d="M10 2c-3.5 0-6 2.5-6 6"/><path d="M14 2c3.5 0 6 2.5 6 6"/></svg></a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="lg:ml-[25%] p-4 sm:p-8">
+            <!-- About Me / Personal Statement Section -->
+            <section id="about" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">About me</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    Hi! I’m <strong>Hemanth sai</strong>. a software developer and an AI & Data Science 
+        student dedicated to the art of problem-solving. My work is a blend of technical skill
+         and creative thinking, focused on building useful digital products. From algorithms to 
+         user-friendly interfaces, I enjoy every step of the process, aiming to create projects
+         that are both intelligent and impactful and also intrested in playing with the data
+          </p>
+                <div class="mt-6 border-t border-gray-700 pt-6">
+                    <h3 class="text-xl font-semibold mb-2 text-white">Contact Information</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><strong>Email:</strong> hemanthsai2203@gmail.com</li>
+                        <li><strong>College-Email:</strong> hemanthsai.m23@iiits.in</li>
+                        <li><strong>Phone:</strong> +91 89194 52145</li>
+                        <li><strong>Location:</strong> Naidupet,AndhraPradesh</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Education</h2>
+                <div class="space-y-6">
+                    <div class="bg-[#12181f] p-4 rounded-xl border border-gray-700">
+                        <h3 class="text-lg font-semibold text-white">Indian Institute Of Information technology Sricity</h3>
+                        <p class="text-[#22d3ee] font-medium">Bachelor of technology in Artificial Intelligence and Data Science</p>
+                        <p class="text-sm text-gray-500 mt-1">Aug 2023- May 2027 | GPA: 8.12</p>
+                        <p class="text-sm text-gray-400 mt-2">Relevant Coursework: Data Structures and Algorithms, Database Systems,OOPs concepts.</p>
+                    </div>
+
+                    <div class="bg-[#12181f] p-4 rounded-xl border border-gray-700">
+                        <h3 class="text-lg font-semibold text-white">narayana Junior College, nellore </h3>
+                        <p class="text-[#22d3ee] font-medium">Intermediate Mathemetics(MiPC)</p>
+                        <p class="text-sm text-gray-500 mt-1">Jun 2021- May 2023 | Marks: 966</p>
+                    </div>
+
+                    <div class="bg-[#12181f] p-4 rounded-xl border border-gray-700">
+                        <h3 class="text-lg font-semibold text-white">St.John's International Residential School,chennai</h3>
+                        <p class="text-sm text-gray-500 mt-1">Jun 2027- May 2021 | marks: 383</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Skills</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">HTML+CSS</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">Python & R</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">Java </p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">Data Analysis</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">Event management</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl text-[#22d3ee]">&bull;</span>
+                        <p class="text-gray-400">Teamwork</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Experience / Projects Section -->
+            <section id="projects" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-6 text-[#22d3ee]">Projects </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-[#12181f] p-6 rounded-xl border border-gray-700 hover:border-[#22d3ee]">
+                        <h3 class="text-xl font-bold text-white mb-2">Insurance Premium Prediction</h3>
+                        <p class="text-sm text-gray-400 mb-4">A brief description of your project. Mention the technologies used and what you learned. This is where you can show samples of work.</p>
+                        <a href="https://github.com/hemanth-sai-2203/insurance_premium_prediction" target="_blank" class="text-[#22d3ee] font-medium hover:underline flex items-center gap-2">View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg></a>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-[#12181f] p-6 rounded-xl border border-gray-700 hover:border-[#22d3ee]">
+                        <h3 class="text-xl font-bold text-white mb-2">Project Name Two</h3>
+                        <p class="text-sm text-gray-400 mb-4">Describe your second project here. It could be a school project, a personal side project, or a volunteer effort.</p>
+                        <a href="#" class="text-[#22d3ee] font-medium hover:underline flex items-center gap-2">View Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg></a>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </section>
+            
+            <!-- Extracurricular & Volunteering Section -->
+            <section id="extracurricular" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Extracurricular & Volunteering</h2>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
+                    <li>Member of the Computer Science Club | Led weekly workshops on Python basics.</li>
+                    <li>Volunteer at the Local Soup Kitchen | Served meals to over 100 people weekly.</li>
+                    <li>Treasurer for Student Government | Managed and audited club funds.</li>
+                </ul>
+            </section>
+
+            <!-- Achievements & Awards Section -->
+            <section id="achievements" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Achievements & Awards</h2>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
+                    <li>Dean's List Honoree | Awarded for academic excellence in Fall 2023.</li>
+                    <li>First Place in University Hackathon | Developed a task management application in 24 hours.</li>
+                    <li>National Honor Society Member | Recognized for leadership and community service.</li>
+                </ul>
+            </section>
+
+            <!-- Resume & References Section -->
+            <section id="resume" class="section-container rounded-3xl p-6 sm:p-12 mb-8 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Resume & References</h2>
+                <p class="text-gray-400 mb-6">
+                    You can provide a link to your resume as a PDF file. For references, you can state that they are available upon request.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/path/to/your-resume.pdf" class="btn bg-[#22d3ee] text-gray-900 py-2 px-6 rounded-full font-semibold hover:bg-opacity-90" download>Download Resume</a>
+                    <a href="#" class="btn bg-gray-700 text-gray-200 py-2 px-6 rounded-full font-semibold hover:bg-gray-600">References Available on Request</a>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Contact / Links</h2>
+                <p class="text-gray-400 leading-relaxed">Feel free to reach out to me via email or phone. You can also connect with me on the platforms below.</p>
+                <div class="mt-6">
+                    <ul class="text-gray-400 space-y-2">
+                        <li><strong>Email:</strong> <a href="mailto:hemanthsai2203@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">hemanthsai2203@gmail.com</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+918919452145" class="text-gray-400 hover:text-white transition-colors duration-300">+91 89194 52145</a></li>
+                        <li class="mt-4"><h3 class="text-xl font-semibold mb-2 text-white">Socials</h3></li>
+                        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemanth-sai-machireddy-a1b192381" target="_blank" class="text-[#22d3ee] font-medium hover:underline">hemanth_sai</a></li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/hemanth-sai-2203" target="_blank" class="text-[#22d3ee] font-medium hover:underline">hemanth_sai</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
