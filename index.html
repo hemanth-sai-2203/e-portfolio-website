@@ -50,12 +50,12 @@
 </head>
 <body class="antialiased">
     <div class="flex flex-col lg:flex-row min-h-screen">
-        <nav class="sidebar fixed inset-y-0 left-0 w-full lg:w-1/4 h-auto lg:h-screen p-8 lg:p-12 flex flex-col justify-between items-center z-50">
+        <nav class="sidebar w-full lg:w-1/4 lg:fixed lg:h-screen p-8 lg:p-12 flex flex-col justify-between items-center z-50">
             <div class="text-center w-full">
-                <h1 class="text-4xl font-bold mt-6 text-white">Hemanth Sai Machi reddy</h1>
-                <p class="mt-2 text-xl font-medium text-[#22d3ee]">AI & Data Science Student | Aspiring Data Scientist</p>
+                <h1 class="text-4xl font-bold mt-6 text-white hidden lg:block">Hemanth Sai Machi reddy</h1>
+                <p class="mt-2 text-xl font-medium text-[#22d3ee] hidden lg:block">AI & Data Science Student | Aspiring Data Scientist</p>
                 <div class="mt-8">
-                    <ul class="space-y-4 text-center lg:text-left">
+                    <ul class="space-y-4 text-center">
                         <li><a href="#about" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">About Me</a></li>
                         <li><a href="#education" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Education</a></li>
                         <li><a href="#skills" class="text-lg text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
@@ -72,7 +72,7 @@
             </div>
         </nav>
 
-        <main class="lg:ml-[25%] p-4 sm:p-8">
+        <main class="lg:ml-[25%] p-4 sm:p-8 w-full">
             <section id="about" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
                 <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">About me</h2>
                 <p class="text-gray-400 leading-relaxed">
@@ -112,21 +112,17 @@
                 </div>
             </section>
 
-           <!-- Skills Section -->
-<section id="skills" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
-    <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Skills</h2>
-    <div class="flex flex-wrap gap-3">
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">HTML + CSS</span>
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Python & R</span>
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Java</span>
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Data Analysis</span>
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Event Management</span>
-        <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Teamwork</span>
-    </div>
-</section>
-
-
-
+            <section id="skills" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Skills</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">HTML + CSS</span>
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Python & R</span>
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Java</span>
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Data Analysis</span>
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Event Management</span>
+                    <span class="px-4 py-2 bg-[#22d3ee] text-gray-900 font-medium rounded-full shadow-md">Teamwork</span>
+                </div>
+            </section>
 
             <section id="projects" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
                 <h2 class="text-3xl font-bold mb-6 text-[#22d3ee]">Projects</h2>
@@ -141,27 +137,28 @@
                         <p class="text-sm text-gray-400 mb-4">This link provides a live demonstration of the Health Insurance Premium Prediction model, allowing users to input data and see predictions instantly.</p>
                         <a href="https://insurancepremiumprediction-uu8rtcs6iubappfow6t6y9w.streamlit.app/" target="_blank" class="text-[#22d3ee] font-medium hover:underline flex items-center gap-2">View Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg></a>
                     </div>
-                    </div>
+                </div>
             </section>
             
             <section id="extracurricular" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
                 <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Extracurricular & Volunteering</h2>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
-                    <li><strong>Computer Science Club Member:</strong> Led weekly workshops on Python basics, resulting in increased student engagement.</li>
-                    <li><strong>Volunteer at Local Soup Kitchen:</strong> Served meals to over 100 people weekly, contributing to community service.</li>
-                    <li><strong>Treasurer for Student Government:</strong> Managed and audited club funds, ensuring financial transparency.</li>
+                    <li><strong>Health & Fitness Enthusiast: </strong>Maintain a disciplined lifestyle by jogging 3–4 km daily, reflecting consistency, self-care, and a focus on physical well-being.</li>
+                    <li><strong>Community Volunteering</strong>Passionate about helping the underprivileged, with active involvement in small-scale initiatives aimed at supporting the poor and needy.</li>
+                    <li><strong>Data Research & Analysis:</strong> Strong interest in exploring economic, financial, and political datasets related to India and Andhra Pradesh. Enthusiastic about analyzing data trends to understand state and national economic growth.</li>
+                    <li><strong>Curiosity in Governance & Policy: </strong>Follow and interpret news on state finance, politics, and economics, building awareness of socio-economic development and governance structures.</li>
                 </ul>
             </section>
-<!-- Achievements & Awards Section -->
-<section id="achievements" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
-    <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Achievements & Awards</h2>
-    <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
-        <li>Completed a certification in <strong>Python for Data Science</strong> (Coursera).</li>
-        <li>Participated in a university-level hackathon — gained experience in teamwork & deadlines.</li>
-        <li>Received recognition for <strong>volunteering in cultural events</strong> at college.</li>
-        <li>Successfully completed multiple <strong>Kaggle mini-projects</strong> as practice.</li>
-    </ul>
-</section>
+
+            <section id="achievements" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Achievements & Awards</h2>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
+                    <li>Completed a certification in <strong>Python for Data Science</strong> (Coursera).</li>
+                    <li>Participated in a university-level hackathon — gained experience in teamwork & deadlines.</li>
+                    <li>Received recognition for <strong>volunteering in cultural events</strong> at college.</li>
+                    <li>Successfully completed multiple <strong>Kaggle mini-projects</strong> as practice.</li>
+                </ul>
+            </section>
 
             <section id="resume" class="section-container rounded-3xl p-6 sm:p-12 mb-8 text-center">
                 <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Resume </h2>
@@ -169,8 +166,8 @@
                     You can download my full resume for a detailed overview of my experience, skills, and projects.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="autoCV.pdf" class="btn bg-[#22d3ee] text-gray-900 py-2 px-6 rounded-full font-semibold hover:bg-opacity-90" download>Download Resume</a>
-                    </div>
+                    <a href="/path/to/your-resume.pdf" class="btn bg-[#22d3ee] text-gray-900 py-2 px-6 rounded-full font-semibold hover:bg-opacity-90" download>Download Resume</a>
+                </div>
             </section>
 
             <section id="contact" class="section-container rounded-3xl p-6 sm:p-12 mb-8">
